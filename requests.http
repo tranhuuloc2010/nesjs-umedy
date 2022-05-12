@@ -1,0 +1,14 @@
+### Get messages
+GET http://localhost:3434/messages
+
+### POST messages
+POST http://localhost:3434/messages
+Content-Type: application/json
+
+{
+  "id": 999,
+  "value": "content"
+}
+
+### Get messages
+GET http://localhost:3434/messages/1
