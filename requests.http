@@ -11,4 +11,4 @@ Content-Type: application/json
 }
 
 ### Get messages
-GET http://localhost:3434/messages/1
+GET http://localhost:3434/messages/12
