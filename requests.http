@@ -6,8 +6,7 @@ POST http://localhost:3434/messages
 Content-Type: application/json
 
 {
-  "id": 999,
-  "value": "content"
+  "content": "this is content"
 }
 
 ### Get messages
