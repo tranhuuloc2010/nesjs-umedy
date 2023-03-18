@@ -15,7 +15,7 @@ import { MessagesModule } from "./messages/messages.module";
       inject: [ConfigService],
       useFactory: (configService: ConfigService) => ({
         type: 'mysql',
-        host: configService.get('DB_HOST'),
+        host: configService.get('DATABASE_HOST'),
         port: +configService.get<number>('DATABASE_PORT'),
         username: configService.get('DATABASE_USER'),
         password: configService.get('DATABASE_PASSWORD'),
