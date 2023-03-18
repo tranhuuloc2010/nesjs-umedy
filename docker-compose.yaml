@@ -1,3 +1,4 @@
+
 services:
   db:
     image: mysql:8.0
@@ -6,4 +7,22 @@ services:
       - MYSQL_DATABASE=personalSql
       - MYSQL_ROOT_PASSWORD=mauFJcuf5dhRMQrjj
     ports:
-      - '5454:3306'
+      - 5454:3306
+#    expose:
+#      - 5454
+  backend:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    command: yarn run start:dev
+    restart: unless-stopped
+    environment:
+#      - DB_PORT=5454
+#      - DB_HOST=db
+#      - DB_HOST=host.docker.internal
+
+#      - DATABASE_HOST=127.0.0.1:5454
+      - DATABASE_HOST=host.docker.internal
+    ports:
+      - 8080:3434
+

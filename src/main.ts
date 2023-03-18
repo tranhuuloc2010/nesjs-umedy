@@ -6,6 +6,7 @@ dotenv.config()
 
 declare const module: any;
 
+// hot reload
 async function bootstrap() {
   if (module.hot) {
     module.hot.accept();
@@ -15,7 +16,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(new ValidationPipe());
 
-  await app.listen(3434);
+  await app.listen(3434,'0.0.0.0');
   console.log(`Application is running on: ${await app.getUrl()}`);
 
 }
