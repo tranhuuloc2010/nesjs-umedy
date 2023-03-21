@@ -13,8 +13,9 @@ import { MessagesService } from './messages.service';
 export class MessagesController {
   constructor(public messagesService: MessagesService) {}
 
-  @Get('')
-  listMessages() {
+  @Get()
+  async listMessages() {
+    // console.log(req.header);
     return this.messagesService.findAll();
   }
 

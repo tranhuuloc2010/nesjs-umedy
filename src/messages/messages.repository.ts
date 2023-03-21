@@ -12,6 +12,7 @@ export class MessagesRepository {
   async findAll() {
     const content = await readFile('messages.json', 'utf8');
     const messages = JSON.parse(content);
+    console.log(messages);
     return messages;
   }
 
