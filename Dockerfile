@@ -12,6 +12,6 @@ COPY . .
 
 RUN yarn run build
 
-CMD [ "yarn", "run", "build" ]
+#CMD [ "yarn", "run", 'start:dev' ]
 # docker build --tag node-docker .
 # docker run -p 8080:8080 -d node-docker
