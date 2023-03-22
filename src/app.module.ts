@@ -21,9 +21,9 @@ import { MessagesModule } from "./messages/messages.module";
         password: configService.get('DATABASE_PASSWORD'),
         database: configService.get('DATABASE_DB'),
         autoLoadEntities: true,
-        extra: {
-          max: 40,
-        },
+        // extra: { // close for fix warning MSQL2
+        //   max: 40,
+        // },
         synchronize: true,
         // logging: true,
         retryAttempts: 20,
