@@ -1,13 +1,32 @@
-### Get messages
-GET http://localhost:8080/messages
-
-### POST messages
-POST http://localhost:3434/messages
+PATCH http://localhost:8080/v1/user/2
 Content-Type: application/json
 
 {
-  "content": "this is content"
+  "name": "Tran Huu Loc",
+  "email": "tranhuuloc2010@gmail.com",
+  "password": "admin@1234",
+  "role": "admin"
 }
 
-### Get messages
-GET http://localhost:8080/messages/12
+###
+DELETE http://localhost:8080/v1/user/1
+Content-Type: application/json
+
+###
+GET http://localhost:8080/v1/user/1
+Accept: application/json
+
+###
+GET http://localhost:8080/v1/user
+Accept: application/json
+
+###
+POST http://localhost:8080/v1/user
+Content-Type: application/json
+
+{
+  "name": "Tran Huu Loc",
+  "email": "tranhuuloc2010@gmail.com",
+  "password": "admin@123",
+  "role": "admin"
+}
