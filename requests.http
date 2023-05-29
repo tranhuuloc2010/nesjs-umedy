@@ -1,19 +1,23 @@
-PATCH http://localhost:8080/v1/user/2
+GET http://localhost:80/api/item?id=99
+Accept: application/json
+
+###
+PATCH http://localhost:8080/v1/user/5
 Content-Type: application/json
 
 {
-  "name": "Tran Huu Loc",
+  "name": "Tran Huu Loc 7979",
   "email": "tranhuuloc2010@gmail.com",
-  "password": "admin@1234",
+  "password": "Admin@1234",
   "role": "admin"
 }
 
 ###
-DELETE http://localhost:8080/v1/user/1
+DELETE http://localhost:8080/v1/user/3
 Content-Type: application/json
 
 ###
-GET http://localhost:8080/v1/user/1
+GET http://localhost:8080/v1/user/2
 Accept: application/json
 
 ###
@@ -27,6 +31,5 @@ Content-Type: application/json
 {
   "name": "Tran Huu Loc",
   "email": "tranhuuloc2010@gmail.com",
-  "password": "admin@123",
-  "role": "admin"
+  "password": "Admin@123"
 }
